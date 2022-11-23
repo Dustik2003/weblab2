@@ -1,6 +1,6 @@
 body{
 	font-family: "Arial";
-	width: 100%;
+	max-width: 100%;
 	font-size: 18px;
 	font-weight: 700;
 	display: flex;
@@ -18,14 +18,21 @@ header{
 .logo{
 	font-size: 36px;
 	font-weight: 700;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	padding: 12px 52px;
-	margin: 6px 9px 6px;	
+	margin: 6px 9px 6px;
 	border-radius: 20px;
 	background-color: white;
 }
 .settings{
-	padding: 27px 28px;
-	border: 1px solid black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px 20px;
+	width: 40px;
+	height: 40px;
 }
 .info{
 	display: flex;
@@ -45,7 +52,7 @@ header{
 	padding: 9px 12px;
 }
 .main{
-  flex: 5;
+	flex: 5;
 }
 .userstat{
 	font-size: 24px;
@@ -66,20 +73,17 @@ header{
 	background: rgba(196, 196, 196, 0.35);
 }
 .uspage{
-	flex: 10;
+	flex: 9;
 	background: #E5E5E5;
 }
 .page{
 	display: flex;
 	flex-direction: row;
 }
-.rpage{
-	padding:14px ;
-}
 .photo{
 	display: flex;
-  justify-content: center;
-  align-items: center;
+	justify-content: center;
+	align-items: center;
 	font-size: 24px;
 	width: 300px;
 	height: 300px;
@@ -95,47 +99,51 @@ header{
 	flex-direction: row;
 }
 .oth{
+	align-items: center;
 	display: flex;
-  justify-content: center;
-  flex-direction: column;
+	flex-direction: column;
 }
 .folnums{
 	display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  width: 301px;
-  height: 20px;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	width: 301px;
+	height: 20px;
 }
 .write, .befriend{
 	font-size: 22px;
 	display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
 	background: #C4C4C4;
 	width: 145px;
 	height: 50px;
 	margin-bottom: 6px;
 	margin-right: 11px;
 }
-.rpage{
-	flex: 5;
+.befriend{
 	margin-right: 0px;
 }
+.rpage{
+	margin:20px ;
+	align-items: center;
+	flex-direction: column;
+}
 .lpage{
-	flex: 5;
+	flex: 1;
+	align-items: center;
 	flex-direction: column;
 }
 .news{
 	display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
 	width: 195px;
 	height: 25px;
 	background: #C4C4C4;
-	margin-left: 51px;
 	margin-bottom: 11px;
 }
 .friends{
@@ -175,7 +183,7 @@ header{
 	justify-content: center;
 	display: flex;
 	align-items: center;
-	margin: 16px 31px 19px 0px;
+	margin: 16px 0px 19px 0px;
 }
 .addinfo{
 	width: 420px;
@@ -185,6 +193,7 @@ header{
 	padding-bottom: 24px;
 
 }
+
 .addinfo>.main{
 	padding: 7px 14px;
 }
@@ -280,4 +289,41 @@ header{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+@media (max-width: 600px) {
+	.sidebar,.right,.left{
+		display: none;
+	}
+	.logo{
+		max-width: 5px;
+		max-height: 20px;
+		font-size: 18px;
+
+	}
+	.mobile{
+		display: inline;
+	}
+	.settings{
+		width: 25px;
+		height: 25px;
+		padding: 15px;
+	}
+	header{
+		height: 50px;
+	}
+	.page{
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+	}
+	.rpage{
+		margin: 0;
+	}
+	.lpage{
+		margin: 20px;
+	}
+	.lpage,.rpage{
+		padding: 0px;
+		margin-top:20px;
+	}
 }
